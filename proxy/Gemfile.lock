@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    evil-proxy (0.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  evil-proxy
+
+RUBY VERSION
+   ruby 2.5.3p105
+
+BUNDLED WITH
+   1.16.6

